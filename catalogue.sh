@@ -59,7 +59,7 @@ VALIDATE $? "unziped catalouge file"
 
 cd /app
 
-npm install &>> $LOGFILE
+npm -p install &>> $LOGFILE
 VALIDATE $? "dependencies downloaded"
 
 
