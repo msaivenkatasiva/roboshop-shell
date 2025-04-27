@@ -39,7 +39,7 @@ VALIDATE $? "enabling mongodb"
 systemctl start mongod &>> $LOGFILE
 VALIDATE $? "starting mongodb"
 
-sed -i 's/127.0.0.1/0.0.0.0/g' /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongo.conf &>> $LOGFILE
 VALIDATE $? "Remote access to mongodb"
 
 systemctl restart mongod &>> $LOGFILE
