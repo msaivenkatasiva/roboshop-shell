@@ -48,7 +48,7 @@ VALIDATE $? "userroboshop added"
 mkdir -p /app 
 VALIDATE $? "app created"
 
-curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>> $LOGFILE
+curl -o -p /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>> $LOGFILE
 VALIDATE $? "catalogue application downloaded"
 
 
