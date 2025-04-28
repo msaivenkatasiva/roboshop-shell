@@ -71,7 +71,7 @@ VALIDATE $? "user enabled successfully"
 systemctl start user &>> $LOGFILE
 VALIDATE $? "system started successfully"
 
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp /root/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 VALIDATE $? "copied mongodb repo"
 
 dnf install mongodb-org-shell -y &>> $LOGFILE
