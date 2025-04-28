@@ -56,7 +56,7 @@ VALIDATE $? "UNZIPPING user"
 npm install &>> $LOGFILE
 VALIDATE $? "dependencies created"
 
-cp user.service /etc/systemd/system/user.service &>> $LOGFILE
+cp /C/Users/Dell/SIVA/devopswithmsvs/roboshop-shell/user.service /etc/systemd/system/user.service &>> $LOGFILE
 VALIDATE $? "copying user.service"
 
 systemctl daemon-reload &>> $LOGFILE
