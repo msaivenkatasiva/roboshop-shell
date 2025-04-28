@@ -61,7 +61,7 @@ npm install &>> $LOGFILE
 VALIDATE $? "dependencies downloaded"
 
 
-cp catalouge.service /etc/systemd/system/catalogue.service &>> $LOGFILE
+cp /root/roboshop-shell/catalouge.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 VALIDATE $? "servicefile created"
 
 
