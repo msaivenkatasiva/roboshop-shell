@@ -59,7 +59,7 @@ VALIDATE $? "changed app"
 npm install &>> $LOGFILE
 VALIDATE $? "dependencies created"
 
-cp /C/Users/Dell/SIVA/devopswithmsvs/roboshop-shell/user.service /etc/systemd/system/user.service &>> $LOGFILE
+cp /root/roboshop-shell/user.service /etc/systemd/system/user.service &>> $LOGFILE
 VALIDATE $? "copying user.service"
 
 systemctl daemon-reload &>> $LOGFILE
