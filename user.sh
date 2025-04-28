@@ -53,6 +53,9 @@ cd /app
 unzip -p /tmp/user.zip &>> $LOGFILE
 VALIDATE $? "UNZIPPING user"
 
+cd /app
+VALIDATE $? "changed app"
+
 npm install &>> $LOGFILE
 VALIDATE $? "dependencies created"
 
