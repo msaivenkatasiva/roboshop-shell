@@ -57,7 +57,7 @@ cd /app &>> $LOGFILE
 unzip -p /tmp/catalogue.zip &>> $LOGFILE
 VALIDATE $? "unziped catalouge file"
 
-npm install -y &>> $LOGFILE
+npm install &>> $LOGFILE
 VALIDATE $? "dependencies downloaded"
 
 
