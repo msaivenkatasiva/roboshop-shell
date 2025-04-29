@@ -57,7 +57,7 @@ mvn clean package &>> $LOGFILE
 
 VALIDATE $? "Installing dependencies"
 
-mv target/shipping-1.0.jar shipping.jar &>> $LOGFILE
+mv target/shipping-1.0.jar shipping.sql &>> $LOGFILE
 
 VALIDATE $? "renaming jar file"
 
