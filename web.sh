@@ -46,7 +46,7 @@ VALIDATE $? "downloading robosho"
 unzip -p /tmp/web.zip &>>$LOGFILE
 VALIDATE $? "unzipping application"
 
-cp /root/roboshop-shell/roboshop.conf etc/nginx/default.d/roboshop.conf &>>$LOGFILE
+cp roboshop.conf etc/nginx/default.d/roboshop.conf &>>$LOGFILE
 VALIDATE $? "copying robo conf"
 
 systemctl restart nginx &>>$LOGFILE
