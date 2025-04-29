@@ -26,5 +26,5 @@ else
     echo -e "$G you are a root user $N"
 fi
 
-dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>>$LOGFILE
+dnf update -y &>>$LOGFILE
 VALIDATE $? "installing remi release"
