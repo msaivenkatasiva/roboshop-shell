@@ -40,7 +40,7 @@ else
 fi
 
 
-mkdir /app &>>$LOGFILE
+mkdir -p /app &>>$LOGFILE
 VALIDATE $? "app created"
 
 curl -L -o /tmp/payment.zip https://roboshop-builds.s3.amazonaws.com/payment.zip &>>$LOGFILE
@@ -48,7 +48,7 @@ VALIDATE $? "validating payment"
 
 cd /app 
 
-unzip /tmp/payment.zip &>>$LOGFILE
+unzip -p /tmp/payment.zip &>>$LOGFILE
 VALIDATE $? "unzipping payment"
 
 cd /app 
