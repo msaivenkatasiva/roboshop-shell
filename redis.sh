@@ -27,4 +27,7 @@ else
 fi
 
 dnf update -y &>>$LOGFILE
-VALIDATE $? "installing remi release"
+VALIDATE $? "updated successfully"
+
+dnf install redis -y &>>$LOGFILE
+VALIDATE $? "redis installed successfully"
