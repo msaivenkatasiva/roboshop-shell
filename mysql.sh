@@ -19,6 +19,13 @@ VALIDATE(){
     fi
 }
 
+if [ $ID -ne 0 ]
+then    
+    echo -e "$R error::please enter with root user $N"
+else
+    echo -e "$G you are a root user $N"
+fi
+
 dnf module disable mysql -y &>>$LOGFILE
 VALIDATE $? "Disabling mysql"
 
