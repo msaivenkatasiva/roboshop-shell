@@ -41,7 +41,4 @@ VALIDATE $? "enabled redis"
 systemctl start redis  &>>$LOGFILE
 VALIDATE $? "started redis"
 
-systemcl restart redis 
-VALIDATE $? "restarting redis"
-
 netstat -lntp
