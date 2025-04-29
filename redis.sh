@@ -32,16 +32,16 @@ VALIDATE $? "updated successfully"
 dnf install redis -y &>>$LOGFILE
 VALIDATE $? "redis installed successfully"
 
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/redis/redis.conf  &>>$LOGFILE
+VALIDATE $? "remote connections allowed"
+
 systemctl enable redis  &>>$LOGFILE
 VALIDATE $? "enabled redis"
 
 systemctl start redis  &>>$LOGFILE
 VALIDATE $? "started redis"
 
-sed -i -p 's/127.0.0.1/0.0.0.0/g' /etc/redis/redis.conf  &>>$LOGFILE
-VALIDATE $? "remote connections allowed"
-
-Systemctl restart redis &>>$LOGFILE
+systemcl restart redis 
 VALIDATE $? "restarting redis"
 
 netstat -lntp
